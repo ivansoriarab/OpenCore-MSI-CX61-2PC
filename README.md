@@ -1,7 +1,9 @@
 # OpenCore running on MSI CX61-2PC
 **Note:** This is not a guide, merely and aid as to what this model requires. For a full guide, see here: [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
 
-![](/images/about-this-mac.jpg)
+<p align="center">
+  <img width="392" height="655" src="/images/about-this-mac.jpg">
+</p>
 
 Hardware Specs:
 
