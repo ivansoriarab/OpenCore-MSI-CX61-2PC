@@ -43,7 +43,7 @@ ETHERNET:   Qualcomm Atheros© E2200
 
 For the most part it's pretty stock, main guys you need to change:
 
-* (Disable CFG Lock)(https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html#what-is-cfg-lock)
+* [Disable CFG Lock](https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html#what-is-cfg-lock)
 * Change video memory size to 64MB
   > When the video memory is set to factory defaults, the internal display keeps flickering, making it completely unusable.
 
@@ -69,12 +69,12 @@ For a full list of ACPI patches, see here: [patches.plist](/ACPI/Custom-SSDTs/pa
 ## Kexts
 
 **Hardware specific kexts:**
-
-* [Airportltlwm](https://github.com/OpenIntelWireless/itlwm)
-* [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM)
-  > Fixes an intermittent bug which Bluetooth appeared to be disabled
-* [MSIFanService](https://github.com/lgs3137/MSIFanControl/)
-* [VoodooPS2](https://github.com/acidanthera/VoodooPS2)
+| Name | Comment |
+| :--- | :--- |
+| [Airportltlwm](https://github.com/OpenIntelWireless/itlwm)| Enables Wireless |
+| [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM) | Enables Bluetooth (Airportltlwm needed) |
+| [MSIFanService](https://github.com/ivansoriarab/Compiled-MSI-Fan-Service) | CPU Fan Control (Used alongside MSI EC Control / MSI Fan Control app) |
+| [VoodooPS2](https://github.com/acidanthera/VoodooPS2) | Enables Keyboard and Touchpad |
 
 ## Configuration Specifics
 
@@ -102,4 +102,4 @@ For a full list of ACPI patches, see here: [patches.plist](/ACPI/Custom-SSDTs/pa
   * **Generic -> SystemProductName**
   
     `MacBookPro11,4` or `MacBookPro14,1`
-    > MacBookPro14,1` is for macOS Ventura
+    > `MacBookPro14,1` is for macOS Ventura
