@@ -22,7 +22,6 @@ ETHERNET:   Qualcomm Atheros© E2200
 
 * macOS Big Sur, Monterey and Ventura
 * HDMI Output
-  * VRAM allocation must be changed to 64MB
 * Mic, speakers and headphones
 * CPU Power Management
 * Trackpad gestures
@@ -33,7 +32,6 @@ ETHERNET:   Qualcomm Atheros© E2200
 * Micro SD card reader
 * Sleep
 * CPU fan control
-  * Using the [MSI Fan Service](https://github.com/lgs3137/MSIFanControl/tree/master/MSIFanService)'s kext and [MSI EC Control](https://github.com/lgs3137/MSIFanControl/tree/master/MSIECControl)'s tool
 * Brightness Keys
   * A [custom map](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Use-Custom-Keyboard-Mapping) must be applied 
 
@@ -42,7 +40,7 @@ ETHERNET:   Qualcomm Atheros© E2200
 * NVIDIA© Geforce 820M
   * Disabled for not being compatible
 * Special buttons (Eject, Screen Off, Turbo Mode, SCM, Airplane Mode)
-  * A [custom map](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Use-Custom-Keyboard-Mapping) can be applied to make them working, but some keys like eject button cannot be mapped as they work different as Apple expects
+  * A [custom map](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Use-Custom-Keyboard-Mapping) can be applied to make them working, but some keys like eject button cannot be mapped as they work in a different way than Apple expects
 
 ## BIOS Settings
 
@@ -71,3 +69,15 @@ For the those curious, I've also provided an ACPI dump of my laptop
 | SSDT-PNLF | N/A | Add Backlight control support 
 
 For a full list of ACPI patches, see here: [patches.plist](/ACPI/Custom-SSDTs/patches.plist)
+
+## Kexts
+
+Hardware specific kexts:
+
+* [Airportltlwm](https://github.com/OpenIntelWireless/itlwm)
+* [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM)
+  * Bluetooth cannot be enabled without it
+* [MSIFanService](https://github.com/lgs3137/MSIFanControl/)
+  * MSIECControl or MSIFanControl apps can be used to control CPU fan's speed.
+    A kext and apps compiled versions can be found in [https://github.com/ivansoriarab/Compiled-MSI-Fan-Control/](Compiled MSI Fan Control)
+* [VoodooPS2](https://github.com/acidanthera/VoodooPS2)
