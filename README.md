@@ -30,14 +30,13 @@
 ## What's not working
 
 * **NVIDIA© Geforce 820M**
-  > Disabled for not being compatible
+  > Disabled, is not compatible
 * **Special buttons (Eject, Screen Off, Turbo Mode, SCM, Airplane Mode)**
   > A [custom map](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Use-Custom-Keyboard-Mapping) can be applied to make them working, but some keys like eject button cannot be mapped as they work in a different way than Apple expects
 
 ## Not tested
 
 * **VGA Port**
-  > There is few chances of it working
 
 ## BIOS Settings
 
