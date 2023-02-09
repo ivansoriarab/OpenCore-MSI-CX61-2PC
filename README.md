@@ -72,8 +72,6 @@ For the those curious, I've also provided an ACPI dump of my laptop
 | SSDT-PLUG | N/A | Fixes power management |
 | SSDT-PNLF | N/A | Add Backlight control support 
 
-For a full list of ACPI patches, see here: [patches.plist](/ACPI/Custom-SSDTs/patches.plist)
-
 ## Kexts
 
 **Hardware specific kexts:**
