@@ -41,8 +41,19 @@
 ## BIOS Settings
 
 * [Disable CFG Lock](https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html#what-is-cfg-lock)
+  * Write the following command in Grub Shell:
+    ```
+    setup_var_cv Setup 0x57 0x01 0x00
+    ```
+
 * Change video memory size to 64MB
-  > When the video memory is set to factory defaults, the internal display keeps flickering, making it completely unusable.
+  > When the video memory is set to factory defaults, the internal display keeps flickering, making it completely unusable
+ 
+  * Write the following command in Grub Shell:
+    ```
+    setup_var_cv Setup 0x2B6 0x01 0x002
+    ```
+    > **Note:** CFG-Lock must be disabled
 
 ## ACPI
 
