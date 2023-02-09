@@ -1,36 +1,31 @@
 # OpenCore running on MSI CX61-2PC
-**Note:** This is not a guide, merely and aid as to what this model requires. For a full guide, see here: [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
 
 <p align="center">
   <img src="/images/about-this-mac.jpg">
 </p>
 
-Hardware Specs:
+**Hardware Specs:**
 
-```
-MODEL       MSI CX61 2PC-1214XES
-CPU:        Intel® Core™ i7-4712MQ
-RAM:        16GB 1600 MHz DDR3
-GPU:        Intel® HD Graphics 4600
-            NVIDIA© Geforce 820M (Disabled)
-AUDIO:      Realtek AC269
-WIFI:       Intel® Dual Band Wireless-AC 7260
-ETHERNET:   Qualcomm Atheros© E2200
-```
+| Device | Model |
+| :--- | :--- |
+| CPU | Intel® Core™ i7-4712MQ |
+| RAM | 16GB 1600 MHz DDR3 |
+| GPU | Intel® HD Graphics 4600 |
+| Audio | Realtek AC269 |
+| WiFi | Intel® Dual Band Wireless-AC 7260 |
+| Ethernet | Qualcomm Atheros© E2200 |
 
 ## What's working
 
-* HDMI Output
-* Mic, speakers and headphones
-* CPU Power Management
-* Trackpad gestures
-* Bluetooth and Wifi
-* Battery readouts
-* Front webcam
-* Micro SD card reader
-* Sleep
-* CPU fan control
-* Brightness Keys
+* HDMI Output (including Audio Output)
+* Speakers and Headphones
+* Webcam
+* Keyboard (including FN keys) & Touchpad
+* Bluetooth and WiFi
+* MicroSD Card Reader
+* CPU Fan Control
+* Sleep and Wake
+
 
 ## What's not working
 
@@ -39,9 +34,12 @@ ETHERNET:   Qualcomm Atheros© E2200
 * **Special buttons (Eject, Screen Off, Turbo Mode, SCM, Airplane Mode)**
   > A [custom map](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Use-Custom-Keyboard-Mapping) can be applied to make them working, but some keys like eject button cannot be mapped as they work in a different way than Apple expects
 
-## BIOS Settings
+## Not tested
 
-For the most part it's pretty stock, main guys you need to change:
+* **VGA Port**
+  > There is few chances of it working
+
+## BIOS Settings
 
 * [Disable CFG Lock](https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html#what-is-cfg-lock)
 * Change video memory size to 64MB
@@ -57,7 +55,7 @@ For the those curious, I've also provided an ACPI dump of my laptop
 **Required SSDTs**
 | SSDT | ACPI Patches | Comments |
 | :--- | :--- | :--- |
-| SSDT-FANQ | N/A | Compiled version of MSI Fan Service's kext |
+| SSDT-FANQ | N/A | CPU Fan Control (Used alongside MSI Fan Service kext) |
 | SSDT-FN | N/A | Maps brightness keys to F14 & F15 |
 | SSDT-GPRW | `GPRW` to `XPRW`| Fixes wake up from sleeping |
 | SSDT-NoHybGfx | N/A | Disables discrete graphics card |
@@ -71,7 +69,7 @@ For a full list of ACPI patches, see here: [patches.plist](/ACPI/Custom-SSDTs/pa
 **Hardware specific kexts:**
 | Name | Comment |
 | :--- | :--- |
-| [Airportltlwm](https://github.com/OpenIntelWireless/itlwm)| Enables Wireless |
+| [Airportltlwm](https://github.com/OpenIntelWireless/itlwm)| Enables WiFi |
 | [BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM) | Enables Bluetooth (Airportltlwm needed) |
 | [MSIFanService](https://github.com/ivansoriarab/Compiled-MSI-Fan-Service) | CPU Fan Control (Used alongside MSI EC Control / MSI Fan Control app) |
 | [VoodooPS2](https://github.com/acidanthera/VoodooPS2) | Enables Keyboard and Touchpad |
