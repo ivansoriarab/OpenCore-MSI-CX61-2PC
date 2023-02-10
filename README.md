@@ -1,7 +1,7 @@
 # OpenCore running on MSI CX61-2PC
 
 <p align="center">
-  <img src="/images/about-this-mac.jpg">
+  <img src="/images/about-this-mac.png">
 </p>
 
 ## Hardware Specs
