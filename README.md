@@ -66,7 +66,7 @@
 | SSDT-GPRW | `GPRW` to `XPRW`| Fixes wake up from sleeping |
 | SSDT-NoHybGfx | N/A | Disables discrete graphics card |
 | SSDT-PLUG | N/A | Fixes power management |
-| SSDT-PNLF | N/A | Add Backlight control support 
+| SSDT-PNLF | N/A | Add backlight control support 
 
 ## Kexts
 
