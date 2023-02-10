@@ -4,7 +4,7 @@
   <img src="/images/about-this-mac.jpg">
 </p>
 
-**Hardware Specs:**
+## Hardware Specs
 
 | Device | Model |
 | :--- | :--- |
@@ -22,7 +22,8 @@
 * Webcam
 * Keyboard (including FN keys) & Touchpad
 * Bluetooth and WiFi
-* MicroSD Card Reader
+* Ethernet port
+* Micro SD Card Reader
 * CPU Fan Control
 * Sleep and Wake
 
@@ -40,29 +41,24 @@
 
 ## BIOS Settings
 
-* [Disable CFG Lock](https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html#what-is-cfg-lock)
-  * Write the following command in Grub Shell:
+### Change the graphic aperture size to 64 MB
+
+ 1. [Unlock CFG](https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html)
+   
+ 2. After booting up in [Modified GRUB Shell](https://github.com/datasone/grub-mod-setup_var), run the following command:
     ```
     setup_var_cv Setup 0x57 0x01 0x00
     ```
-
-* Change video memory size to 64MB
-  > When the video memory is set to factory defaults, the internal display keeps flickering, making it completely unusable
- 
-  * Write the following command in Grub Shell:
+    
+3. And, finally, write this command:
     ```
-    setup_var_cv Setup 0x2B6 0x01 0x002
+    setup_var_cv Setup 0x2B6 0x01 0x02
     ```
-    > **Note:** CFG-Lock must be disabled
 
 ## ACPI
 
-For the those curious, I've also provided an ACPI dump of my laptop
+### Required SSDTs
 
-* [Firmware Dumps](/ACPI/ACPI-Dumps/)
-* [Custom SSDTs](/ACPI/Custom-SSDTs/)
-
-**Required SSDTs**
 | SSDT | ACPI Patches | Comments |
 | :--- | :--- | :--- |
 | SSDT-FANQ | N/A | CPU Fan Control (Used alongside MSI Fan Service kext) |
@@ -74,7 +70,8 @@ For the those curious, I've also provided an ACPI dump of my laptop
 
 ## Kexts
 
-**Hardware specific kexts:**
+### Hardware specific kexts
+
 | Name | Comment |
 | :--- | :--- |
 | [Airportltlwm](https://github.com/OpenIntelWireless/itlwm)| Enables WiFi |
@@ -84,7 +81,7 @@ For the those curious, I've also provided an ACPI dump of my laptop
 
 ## Configuration Specifics
 
-**DeviceProperties:**
+### DeviceProperties
 
 * **PciRoot(0x0)/Pci(0x1F,0x3)**
   | Key | Type | Value |
@@ -98,7 +95,7 @@ For the those curious, I've also provided an ACPI dump of my laptop
   | device-id | Data | 12040000 | Fake device for Intel® HD Graphics 4600 Mobile |
   | agdpmod | String | vit9696 | Fixes lag at login screen |
   
-**Kernel:**
+### Kernel
 * **Quirks:**
 
   `AppleCpuPmCfgLock` set to `False`
@@ -109,3 +106,10 @@ For the those curious, I've also provided an ACPI dump of my laptop
   
     `MacBookPro11,4` or `MacBookPro14,1`
     > `MacBookPro14,1` is for macOS Ventura
+    
+## Miscellaneous Fixes
+
+### Graphics hardware acceleration in macOS Ventura
+
+1. Download [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher)
+2. Run it and apply **Post Install Volume Patches**
