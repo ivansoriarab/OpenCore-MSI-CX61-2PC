@@ -59,7 +59,7 @@
 | SSDT |  Comments |
 | :--- | :--- |
 | [SSDT-FANQ](https://github.com/ivansoriarab/Compiled-MSI-Fan-Control/blob/main/SSDT-FANQ.aml) | CPU fan control<br>*Decompiled SSDT available [here](https://github.com/lgs3137/MSIFanControl/blob/master/SSDT-FANQ.dsl)* |
-| [SSDT-FN](https://github.com/ivansoriarab/OpenCore-MSI-CX61-2PC/blob/master/ACPI/Custom-SSDTs/Compiled/SSDT-FN.aml) | Maps brightness keys to F14 & F15 |
+| [SSDT-KYBD](https://github.com/ivansoriarab/OpenCore-MSI-CX61-2PC/blob/master/ACPI/Custom-SSDTs/Compiled/SSDT-FN.aml) | Enables numeric lock LED at boot<br>Changes layout to ISO<br>Maps brightness keys to F14 and F15 |
 | [SSDT-GPRW](https://github.com/dortania/OpenCore-Post-Install/blob/master/extra-files/SSDT-GPRW.aml) | Fixes wake up from sleeping |
 | [SSDT-HPET](https://github.com/ivansoriarab/OpenCore-MSI-CX61-2PC/blob/master/ACPI/Custom-SSDTs/Compiled/SSDT-HPET.aml) | Fixes IRQ conflicts (the following [patches](https://github.com/ivansoriarab/OpenCore-MSI-CX61-2PC/blob/master/ACPI/Custom-SSDTs/patches.plist) must be applied in OpenCore)<br> *Decompiled SSDT available [here](https://github.com/ivansoriarab/OpenCore-MSI-CX61-2PC/blob/master/ACPI/Custom-SSDTs/Decompiled/SSDT-HPET.dsl)* |
 | [SSDT-NoHybGfx](https://github.com/ivansoriarab/OpenCore-MSI-CX61-2PC/blob/master/ACPI/Custom-SSDTs/Compiled/SSDT-NoHybGfx.aml) | Disables discrete graphics card<br>*Decompiled SSDT available [here](https://github.com/dortania/Getting-Started-With-ACPI/blob/master/extra-files/decompiled/SSDT-NoHybGfx.dsl.zip)* |
