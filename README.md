@@ -113,5 +113,5 @@
 1. Download [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/releases)
 2. Run it and apply **Post Install Volume Patches**
 
-### Special buttons (Eject, Screen off, Turbo mode, SCM, Airplane mode)
+### Special buttons (Eject, Screen off, Turbo mode, SCM, Airplane mode)
 See here: [Custom Key Mapping](/Custom-Key-Mapping/)
