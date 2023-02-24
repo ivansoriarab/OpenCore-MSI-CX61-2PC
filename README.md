@@ -31,7 +31,6 @@
 ## What's not working
 
 * **NVIDIA© Geforce 820M**
-  > Disabled, is not compatible
 
 ## Not tested
 
