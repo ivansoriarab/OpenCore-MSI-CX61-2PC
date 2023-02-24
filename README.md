@@ -32,8 +32,6 @@
 
 * **NVIDIA© Geforce 820M**
   > Disabled, is not compatible
-* **Special buttons (Eject, Screen off, Turbo mode, SCM, Airplane mode)**
-  > A [custom map](https://github.com/RehabMan/OS-X-Voodoo-PS2-Controller/wiki/How-to-Use-Custom-Keyboard-Mapping) can be applied to make them working, but some keys like eject button cannot be mapped as they work in a different way than Apple expects
 
 ## Not tested
 
@@ -41,7 +39,7 @@
 
 ## BIOS Settings
 
-### Change the graphic aperture size to 64 MB
+### Change the graphics aperture size to 64 MB
 
  1. [Unlock CFG](https://dortania.github.io/OpenCore-Post-Install/misc/msr-lock.html)
    
@@ -114,3 +112,6 @@
 
 1. Download [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/releases)
 2. Run it and apply **Post Install Volume Patches**
+
+### Special buttons (Eject, Screen off, Turbo mode, SCM, Airplane mode)
+See here: [Custom Key Mapping](/Custom-Key-Mapping/)
