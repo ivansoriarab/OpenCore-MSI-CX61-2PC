@@ -114,4 +114,4 @@
 2. Run it and apply **Post Install Volume Patches**
 
 ### Special buttons (Eject, Screen off, ECO mode, SCM, Airplane mode)
-See here: [Custom Key Mapping](/Custom-Key-Mapping/)
+See here: [Custom Key Mapping](https://gist.github.com/ivansoriarab/c4bf540f057f6f0ad669bf1e9ebd8528#file-custom-key-mapping-msi-cx61-2pc-md/)
