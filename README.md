@@ -32,6 +32,13 @@
 
 * **NVIDIA© Geforce 820M**
 
+* **Special keys (Eject, Screen off, ECO mode, SCM, Airplane mode)**
+  *  More information on how to make them work again can be found in the [_Miscellaneous Fixes_](#special-keys-eject-screen-off-eco-mode-scm-airplane-mode) section
+
+* **Wi-Fi and Bluetooth LEDs**
+  * As a temporary patch, to enable Wi-Fi and Bluetooth, boot into Windows, run SCM, and activate them from there.<br>
+    Repeat these steps each you turn off Wi-Fi or Bluetooth from macOS.
+
 ## Not tested
 
 * **VGA Port**
@@ -112,5 +119,5 @@
 1. Download [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/releases)
 2. Run it and apply **Post Install Volume Patches**
 
-### Special buttons (Eject, Screen off, ECO mode, SCM, Airplane mode)
-See here: [Custom Key Mapping](https://gist.github.com/ivansoriarab/c4bf540f057f6f0ad669bf1e9ebd8528#file-custom-key-mapping-msi-cx61-2pc-md/)
+### [Special keys (Eject, Screen off, ECO mode, SCM, Airplane mode)](#special-keys)
+See here: [Special Keys Mapping](Special-Keys-Mapping.md)
