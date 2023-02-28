@@ -50,7 +50,7 @@ DefinitionBlock ("", "SSDT", 2, "IVSOAR", "FN", 0x00000000)
     })
 }
 ```
-> In case of using another SSDT which patches another keyboard settings, merge this code into that SSDT
+> In case you use another SSDT that patches different keyboard settings (which in this repository is SSDT-KYBD.aml), merge this code into that SSDT.
 
 
 **2. Map EC Queries to PS2 codes:**
