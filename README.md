@@ -31,13 +31,14 @@
 ## What's not working
 
 * **NVIDIA© Geforce 820M**
+  * macOS [does not support switchable graphics cards](https://dortania.github.io/OpenCore-Install-Guide/macos-limits.html#gpu-support)
 
 * **Special keys (Eject, Screen off, ECO mode, SCM, Airplane mode)**
   *  More information on how to make them work again can be found in the [_Miscellaneous Fixes_](#special-keys-eject-screen-off-eco-mode-scm-airplane-mode) section
 
 * **Wi-Fi and Bluetooth LEDs**
   * As a temporary patch, to enable Wi-Fi and Bluetooth, boot into Windows, run SCM, and activate them from there.<br>
-    Repeat these steps each you turn off Wi-Fi or Bluetooth from macOS.
+    Repeat these steps each you turn off Wi-Fi or Bluetooth from macOS
 
 ## Not tested
 
